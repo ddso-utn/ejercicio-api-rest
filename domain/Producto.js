@@ -7,6 +7,29 @@ export class Producto {
         this.#precioBase = precioBase
     }
 
+    /*
+    //Si queremos que se guarde el descuento
+    #descuento
+
+    constructor(nombre, precioBase, descuento = null) {
+        this.nombre = nombre
+        this.#precioBase = precioBase
+        this.#descuento = descuento
+    }
+    
+    get descuento() {
+        return this.#descuento
+    }
+
+    calcularPrecioFinal(cantidad = 1) {
+        let descuentoAplicado = 0
+        if (this.#descuento) {
+            descuentoAplicado = this.#descuento.valorDescontado(this.#precioBase, cantidad)
+        }
+        return (this.#precioBase * cantidad) - descuentoAplicado
+    }
+    */
+
     get precioBase() {
         return this.#precioBase
     }
@@ -14,16 +37,6 @@ export class Producto {
     set precioBase(nuevoPrecio) {
         this.#precioBase = nuevoPrecio
     }
-    
-    toJSON(){
-        return {
-            nombre: this.nombre,
-            precioBase: this.precioBase
-        };
-    }
 }
-
-
-
 
 export default Producto;

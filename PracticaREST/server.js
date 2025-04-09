@@ -43,7 +43,7 @@ const carrito = new Carrito();
 
 //GET: Obtener todos los productos
 app.get('/productos', (req, res) => {
-    res.json(productosDisponibles.map(p => p.toJSON()));
+    res.json(productosDisponibles);
 });
 
 
@@ -57,7 +57,7 @@ app.get('/producto', (req, res) => {
   if (!producto) {
       return res.status(404).json({ error: "Producto no encontrado" });
   }
-  res.status(200).json(producto.toJSON());
+  res.status(200).json(producto);
 });
 
 
@@ -75,14 +75,14 @@ app.post('/carrito', (req, res) => {
 
   res.status(201).json({
       mensaje: "Producto agregado al carrito",
-      item: item.toJSON()
+      item: item
   });
 });
 
 
 //GET: Obtener contenido del carrito con precios aplicados
 app.get('/carrito', (req, res) => {
-  res.json(carrito.obtenerDetalle());
+  res.json(carrito);
 });
 
 
@@ -111,7 +111,7 @@ app.post('/productos', (req, res) => {
     const nuevoProducto = new Producto(nombre, precioBase, descuento);
     productosDisponibles.push(nuevoProducto);
   
-    res.status(201).json({ mensaje: "Producto creado", producto: nuevoProducto.toJSON() });
+    res.status(201).json({ mensaje: "Producto creado", producto: nuevoProducto});
   });
   
 

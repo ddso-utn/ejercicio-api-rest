@@ -12,10 +12,6 @@ export class Carrito {
     agregarItem(item) {
         this.items.push(item)
     }
-
-    obtenerDetalle() {
-        return this.items.map(item => item.toJSON());
-    }
     
     /*
     //Este lo podemos usar cuando agregamos 2 leches para mostrar en vez de 2 objetos, 1 solo con cantidad 2
