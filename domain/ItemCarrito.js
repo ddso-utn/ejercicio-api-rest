@@ -24,4 +24,15 @@ export class ItemCarrito {
         return this.producto.precioBase
     }
 
+    toJSON() {
+        return {
+            producto: this.producto.toJSON(),
+            cantidad: this.cantidad,
+            precioFinal: this.precioFinal()
+        };
+    }
+    
+
 }
+
+export default ItemCarrito;

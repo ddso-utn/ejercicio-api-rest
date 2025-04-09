@@ -14,4 +14,16 @@ export class Producto {
     set precioBase(nuevoPrecio) {
         this.#precioBase = nuevoPrecio
     }
+    
+    toJSON(){
+        return {
+            nombre: this.nombre,
+            precioBase: this.precioBase
+        };
+    }
 }
+
+
+
+
+export default Producto;
