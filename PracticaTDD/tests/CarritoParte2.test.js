@@ -2,9 +2,9 @@
 
 // RED
 
-import { Carrito } from './CarritoTDD.js';
-import { Producto } from './ProductoTDD.js';
-import { DescuentoPorcentaje } from './DescuentoTDD.js';
+import { Carrito } from '../model/CarritoTDD.js';
+import { Producto } from '../model/ProductoTDD.js';
+import { DescuentoPorcentaje } from '../model/DescuentoTDD.js';
 
 describe('Carrito de Compras', () => {
   

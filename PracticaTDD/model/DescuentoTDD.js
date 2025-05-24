@@ -94,33 +94,3 @@ export class Descuento3por2 extends Descuento {
 
 //------------------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-/*------------------------------------------------------------------------------------------------------------------------------
-// ACTIVIDAD EXTRA:  Implementar DescuentoPorMontoMinimo - TDD
-
-
-export class DescuentoPorMontoMinimo extends Descuento {
-  #montoMinimo;
-  #descuento;
-
-  constructor(montoMinimo, descuento) {
-    super();
-    this.montoMinimo = montoMinimo;
-    this.descuento = descuento;
-  }
-
-  aplicar(total, cantidad = 1) {
-    // total podría ser precio base * cantidad o un total ya calculado
-    if (total >= this.montoMinimo) {
-      return total - this.descuento;
-    }
-    return total;
-  }
-
-}
-
-//------------------------------------------------------------------------------------------------------------------------------*/

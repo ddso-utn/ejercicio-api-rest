@@ -1,9 +1,9 @@
 // PARTE 3: Gestión de Descuentos Complejos - TDD
 
 
-import { Carrito } from './CarritoTDD';
-import { Producto } from './ProductoTDD';
-import { DescuentoFijo, Descuento3por2 } from './DescuentoTDD.js';
+import { Carrito } from '../model/CarritoTDD';
+import { Producto } from '../model/ProductoTDD';
+import { DescuentoFijo, Descuento3por2 } from '../model/DescuentoTDD.js';
 
 
 describe('Descuentos Complejos', () => {
